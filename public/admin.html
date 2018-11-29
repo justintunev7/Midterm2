@@ -1,0 +1,39 @@
+<html>
+
+
+<head>
+    <title>Store Admin</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="javascripts/shop.js"></script>
+
+</head>
+
+<body ng-app="shop" ng-controller="MainCtrl">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="page-header" id="box">
+                <h1>Store Management Interface</h1>
+            </div>
+
+
+            <form id="box" ng-submit="addProduct()" style="margin-top:30px;">
+                Product Name <input type="text" ng-model="productname" class="form-control" id="inputdefault"></input><br>
+                Price <input type="text" ng-model="price"class="form-control" id="inputdefault"></input><br>
+                Picture URL <input type="text" ng-model="pictureURL"class="form-control" id="inputdefault"></input><br><br>
+                <button type="submit" class="btn btn-primary btn-md">Add Product</button>
+            </form>
+
+            <div id="box">
+                <h1>Current Products</h1>
+                <div ng-repeat="product in products | orderBy: 'productName'">
+                    <span class="glyphicon glyphicon-remove" ng-click="delete(product)"></span>{{product.productName}} - price {{product.price}} - ordered {{product.orders}} <img src="{{product.imageURL}}" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

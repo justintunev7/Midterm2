@@ -1,0 +1,20 @@
+body {
+  background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/dTGsD6G/people-are-shopping-in-a-supermarket-blurred-background_sjd-ai5b__F0000.png");
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h1 {
+  text-align: center;
+}
+
+#box {
+    padding: 20px 20px 20px 20px;
+    border: 1px solid #BFBFBF;
+    margin-bottom:50px;
+    background-color: white;
+    box-shadow: 10px 10px 5px #aaaaaa;
+}
